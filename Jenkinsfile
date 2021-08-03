@@ -6,10 +6,8 @@ pipeline {
 		   
        }
        options { 
-	buildDiscarder(logRotator(numToKeepStr: '1'))
-		retry(3)
-		quietPeriod(30)
-		timeout(time: 1, unit: 'HOURS')
+	buildDiscarder(logRotator(numToKeepStr: '10'))
+		
 	}
     stages {
         stage('Hello') {
